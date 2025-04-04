@@ -1,0 +1,180 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6.5rem;
+    margin-bottom: 1000px;
+    background-color: #121212; /* Mörk bakgrundsfärg */
+    color: white; /* Gör texten vit för bättre kontrast */
+}
+
+.ScrollContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Mörk bakgrundsfärg */
+    position: sticky;
+    top: 0;
+}
+
+#title {
+    transition: font-size 1s ease, opacity 0.5s ease;
+    color: white; /* Ensure the text is visible */
+    position: fixed; /* Keep the title fixed in place */
+    top: 10%; /* Move the title higher (adjust this value as needed) */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center alignment */
+    margin: 20px 0;
+}
+
+
+.brands-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px; /* Justera avståndet från toppen */
+}
+
+
+#menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#menu .line {
+    width: 100%;
+    height: 4px;
+    background-color: white; /* Matches the text color */
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+#menu:hover .line {
+    background-color: gray; /* Change color on hover */
+}
+
+
+/* Dropdown menu container */
+.dropdown-menu {
+    position: absolute;
+    top: 60px; /* Adjust based on the position of the hamburger menu */
+    right: 20px;
+    background-color: white; /* White background for the menu */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px; /* Reduce padding to make the menu shorter */
+    z-index: 1000;
+    display: none; /* Initially hidden */
+    width: 150px; /* Set a fixed width for the menu */
+}
+
+/* Dropdown menu items */
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    margin: 3px 0; /* Reduce margin between items */
+}
+
+.dropdown-menu ul li a {
+    color: black; /* Black text for better contrast */
+    text-decoration: none;
+    font-size: 0.8rem; /* Slightly smaller font size */
+    padding: 5px; /* Add padding for clickable area */
+    display: block; /* Make the entire area clickable */
+    text-align: left; /* Align text to the left */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    color: black; /* Keep text black on hover */
+}
+
+/* Show the dropdown menu */
+.dropdown-menu.visible {
+    display: block;
+}
+
+
+.brands-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 700px; /* Adjust spacing from the top */
+    font-size: 1rem; /* Smaller font size for the section */
+}
+
+.brands-container {
+    display: flex; /* Arrange items in a row */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+    gap: 20px; /* Add spacing between items */
+    margin-top: 20px; /* Add spacing above the container */
+}
+
+.brand {
+    background-color: white; /* Background for each brand */
+    color: black; /* Text color for better contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Add padding inside each brand box */
+    width: 150px; /* Set a fixed width for each brand */
+    text-align: center; /* Center-align text and content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.brand img {
+    width: 100%; /* Make the image fit the brand box */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Match the border radius of the brand box */
+}
+
+.brand p {
+    margin-top: 10px; /* Add spacing between the image and text */
+    font-size: 0.8rem; /* Smaller font size for brand names */
+    font-weight: bold; /* Make the text bold */
+}
+
+.brand:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    position: fixed; /* Gör footern fast längst ner */
+    bottom: 0; /* Placera den längst ner på sidan */
+    left: 0;
+    width: 100%; /* Gör footern lika bred som sidan */
+    background-color: #121212; /* Matcha bakgrundsfärgen */
+    color: white; /* Gör texten vit för kontrast */
+    text-align: center; /* Centrera texten */
+    font-size: 0.8rem; /* Gör texten liten */
+    padding: 5px 0; /* Lägg till lite vertikal padding */
+    z-index: 1000; /* Se till att footern ligger över andra element */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Lägg till en subtil skugga ovanför footern */
+}
+
+@media (max-width: 768px) {
+    #title {
+        font-size: 2rem; /* Mindre textstorlek */
+        top: 15%; /* Flytta ner titeln lite */
+    }
+}
+
+/* För mobiltelefoner */
+@media (max-width: 480px) {
+    #title {
+        font-size: 1.5rem; /* Ännu mindre textstorlek */
+        top: 20%; /* Flytta ner titeln ännu mer */
+    }
+}
