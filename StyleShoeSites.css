@@ -1,0 +1,161 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+    height: 100%;
+    max-height: 140vh;
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background-color: #121212; /* Nike-themed color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+
+.return{
+    display: inline-block;
+    padding: 15px 30px; /* Adjust padding for a larger button */
+    background-color: #ff6f61; /* Button background color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size for better visibility */
+    text-align: center; /* Center-align text */
+    margin: 20px auto; /* Center the button horizontally and add spacing */
+    display: block; /* Make it a block element for centering */
+    width: fit-content; /* Adjust width to fit the content */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    }
+
+.return a{
+    color: white; /* White text color for the link */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+    
+
+.return:hover {
+    background-color: #ff3b2f; /* Change color on hover */
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Brands Section */
+.brands-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #121212; /* White background for the section */
+    margin: 20px auto;
+    max-width: 1200px; /* Limit the width for better readability */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.brands-section h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #121212; /* Nike-themed color */
+}
+
+/* Brands Container */
+.brands-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    justify-items: center; /* Center items horizontally */
+}
+
+/* Individual Brand Cards */
+.brand {
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Subtle border for separation */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensure content stays inside the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    text-align: center;
+    padding: 10px;
+}
+
+.brand img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.brand p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.brand:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.brand img:hover {
+    transform: scale(1.1); /* Slight zoom effect on the image */
+}
+
+
+.brand .price {
+    display: block; /* Ensure the price is on its own line */
+    margin-top: 5px; /* Add spacing above the price */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make the price bold */
+    color: #ff6f61; /* Use a standout color for the price */
+    text-align: center; /* Center-align the price */
+}
+
+
+.brand a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark text for readability */
+}
+
+
+footer {
+    position: fixed; /* Keep the footer fixed at the bottom */
+    bottom: 0; /* Place it at the bottom */
+    width: 100%; /* Full width */
+    background-color: #121212; /* Match background color */
+    color: white; /* White text for contrast */ /* Small text size */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow above the footer */
+    align-items: center; /* Center items vertically */    background-color: #121212;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9rem; /* Slightly increase font size */
+    line-height: 1.5; /* Add line height for better readability */
+    margin: 0; /* Add spacing around the text */
+}
+
+@media (max-width: 768px) {
+
+
+    .brands-container {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 items per row */
+    }
+
+    header {
+        font-size: 1.5rem; /* Smaller header for mobile */
+    }
+}

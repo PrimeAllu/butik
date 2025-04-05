@@ -2,16 +2,31 @@ window.addEventListener('scroll', function () {
     const textElement = document.getElementById('title');
     const scrollPosition = window.scrollY;
 
+    // Detect if screen width is mobile
+    const isMobile = window.matchMedia("(max-width: 1260px)").matches;
+
     if (scrollPosition > 0) {
-        // Change the title's size and position on the first scroll
-        textElement.style.fontSize = '1.5rem'; // Smaller size
-        textElement.style.top ='2%'
-        textElement.style.transform ='translate(-50%, -18%)'; // Slightly move up relative to the new start position
+        // When user scrolls down
+        if (isMobile) {
+            textElement.style.fontSize = '2rem'; // Smaller for mobile
+            textElement.style.top = '1%';
+            textElement.style.transform = 'translate(-50%, -20%)';
+        } else {
+            textElement.style.fontSize = '1.5rem';
+            textElement.style.top = '2%';
+            textElement.style.transform = 'translate(-50%, -18%)';
+        }
     } else {
-        // Reset the title to its original size and position when at the top
-        textElement.style.fontSize = '13rem'; // Original size
-        textElement.style.top = '2%';
-        textElement.style.transform = 'translate(-50%, -18%)'; // Centered position
+        // When at the top of the page
+        if (isMobile) {
+            textElement.style.fontSize = '1.5rem'; // Original mobile size
+            textElement.style.top = '2%';
+            textElement.style.transform = 'translate(-50%, -20%)';
+        } else {
+            textElement.style.fontSize = '13rem'; // Original desktop size
+            textElement.style.top = '2%';
+            textElement.style.transform = 'translate(-50%, -18%)';
+        }
     }
 });
 
@@ -19,4 +34,3 @@ function toggleMenu() {
     const dropdownMenu = document.getElementById('dropdown-menu');
     dropdownMenu.classList.toggle('visible'); // Toggle the 'visible' class
 }
-
